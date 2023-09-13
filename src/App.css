@@ -1,38 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&family=Source+Code+Pro:wght@500&display=swap");
+
 .App {
   text-align: center;
+  font-family: "Source Code Pro", monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.head {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 20vh;
+  font-size: 3rem;
+  color: #dbd9d9;
 }
 
-.App-link {
-  color: #61dafb;
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+  font-size: 2rem;
+  color: #dbd9d9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  font-size: 2rem;
+  color: #dbd9d9;
+}
+
+.body-text {
+  width: 100%;
+  max-width: 35rem;
+  padding: 0.3rem;
+  background-color: #2d2d43;
+  border-radius: 1.2rem;
+}
+
+.name-field {
+  border: 0;
+  outline: 0;
+  color: #dbd9d9;
+  background: transparent;
+  border-bottom: 1px solid #dbd9d9;
+  width: 10rem;
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  font-size: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  height: 100vh;
+}
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5%;
+  border: 2px solid #dbd9d930;
+  border-radius: 1.2rem;
+}
+
+.form-field {
+  border: 0;
+  outline: 0;
+  color: #dbd9d9;
+  background: transparent;
+  border-bottom: 1px solid #dbd9d953;
+  width: 22rem;
+  max-width: 50vw;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.2rem;
+}
+
+.form-drop {
+  margin-top: 0.5rem;
+}
+
+.form-check {
+  margin-top: 0.5rem;
+  width: 22rem;
+  max-width: 50vw;
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 22rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+body {
+  background: #222233;
+  height: 100vh;
 }
