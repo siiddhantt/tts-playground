@@ -28,6 +28,25 @@ function Home() {
       console.error("An error occurred:", error);
     }
   };
+
+  useEffect(() => {
+    adjustWidth();
+  }, [name]);
+
+  const adjustWidth = () => {
+    if (flag) {
+      const inputField = document.querySelector(".name-field");
+      let width = name.length;
+      console.log(width);
+      if (width < 1) {
+        inputField.style.width = "initail";
+      } else {
+        inputField.style.width = width + "ch";
+        console.log(width);
+      }
+    }
+  };
+
   return (
     <>
       <div className="head">
