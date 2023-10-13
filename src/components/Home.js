@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { TTS_API } from "../api";
 
