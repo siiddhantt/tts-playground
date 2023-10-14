@@ -31,7 +31,7 @@ function Home() {
 
   useEffect(() => {
     adjustWidth();
-  }, [name]);
+  });
 
   const adjustWidth = () => {
     if (flag) {
@@ -42,7 +42,6 @@ function Home() {
         inputField.style.width = "initail";
       } else {
         inputField.style.width = width + "ch";
-        console.log(width);
       }
     }
   };
