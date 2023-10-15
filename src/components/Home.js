@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { TTS_API } from "../api";
 
@@ -28,6 +28,24 @@ function Home() {
       console.error("An error occurred:", error);
     }
   };
+
+  useEffect(() => {
+    adjustWidth();
+  });
+
+  const adjustWidth = () => {
+    if (flag) {
+      const inputField = document.querySelector(".name-field");
+      let width = name.length;
+      console.log(width);
+      if (width < 1) {
+        inputField.style.width = "initail";
+      } else {
+        inputField.style.width = width + "ch";
+      }
+    }
+  };
+
   return (
     <>
       <div className="head">
